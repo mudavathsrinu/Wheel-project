@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPE OF WHEELS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&amp;display=swap">
+    <script src="https://kit.fontawesome.com/3b0c038894.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- container -->
+    <div class="container">
+        <!-- wheel -->
+        <div class="wheel">
+            <span class="block"> </span>
+            WHEELS
+        </div>
+        <!-- content -->
+        <div class="content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, quaerat. Quidem recusandae rem
+                repellat placeat. <br> Amet porro dolor sequi provident ullam reprehenderit hic officiis beatae. Lorem
+                ipsum dolor sit amet.</p>
+        </div>
+
+        <!-- images -->
+        <div class="images">
+            <!-- image-1 -->
+            <div class="hover-img">
+                <img id="myImg" src="Images/wgu.png">
+                <div class="wheel-img-content">
+                    <h4>17-INCH CAST ALUMINIUM WHEEL, FULLY <br> PAINTED SILVER LITHO</h4>
+                    <p>Standard on Touring FWD</p>
+                    <h4>(WGU)</h4>
+                </div>
+                <!-- zoom -->
+                <div id="myModal" class="modal">
+                    <span class="close">
+                        <i class="fas fa-angle-left"></i></span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                            <div class="wheel-img-content" class="zoom-content" style="position: absolute; top: 73%; left: 15%;">
+                                <h4>17-INCH CAST ALUMINIUM WHEEL, FULLY <br> PAINTED SILVER LITHO</h4>
+                                <p>Standard on Touring FWD</p>
+                                <h4>(WGU)</h4>
+                            </div>
+                </div>
+            </div>
+            <!--image-2-->
+            <div class="wheel-img">
+                <div class="img-2">
+                    <img src="Images/wjr.png" alt="aluminium wheel">
+                </div>
+                <div class="wheel-img-content">
+                    <h4>17-INCH CAST ALUMINIUM DAIMOND-CUT WHEEL <br> WITH BALTIC GRAY POCKETS</h4>
+                    <p>Standard on Touring L FWD / Hybrid and <br> Touring Hybrid</p>
+                    <h4>(WJR)</h4>
+                </div>
+            </div>
+
+
+            <!-- image-3 -->
+            <div class="wheel-img">
+                <div class="img-3">
+                    <img src="Images/wp6.png" alt="foreshadow">
+                </div>
+                <div class="wheel-img-content">
+                    <h4>18-INCH CAST ALUMINIUM WHEEL WITH <br> FORESHADOW FINISH</h4>
+                    <P>Included With S Appearence Package on <br> Touring Hybrid, Touring L Hybrid and <br> Limited
+                        Hybrid</P>
+                    <h4>(WP6)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var modal = document.getElementById('myModal');
+
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
